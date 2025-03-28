@@ -2,9 +2,9 @@ function stringChop(str, size) {
  
 let new array=[];
 	for(let i=0;i<str.length;i+=n){
-		newArray.push(str.slice(i,i+n))
+		newArray.push(str.split(i,i+n))
 	}
-	return newArray
+	return newArray;
 // your code here
 }
 
