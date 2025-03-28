@@ -1,13 +1,18 @@
 function stringChop(str, size) {
  
-let new array=[];
-	if(!str||len <=0){
-		return [];
-	}
 let chunks=[];
-	for(let i=0;i<str.length;i+=len){
-	chunks.push(str.substring(i,i+len));
+	let count=0;
+	let string="";
+	for(let i=0;i<str.length;i++){
+	string+=str[i];
+		count++;
+		if(count==size){
+		chunks.push(string);
+			count=0;
+			string="";
+		}
 	}
+	chunks.push(string);
 	return chunks;
 // your code here
 }
